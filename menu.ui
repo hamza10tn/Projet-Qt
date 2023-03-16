@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menu</class>
+ <widget class="QDialog" name="menu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>628</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>541</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Menu</string>
+   </property>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+    </property>
+    <property name="text">
+     <string>Account</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+    </property>
+    <property name="text">
+     <string>Gestion des employees</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+    </property>
+    <property name="text">
+     <string>Gestion des clients</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+    </property>
+    <property name="text">
+     <string>Gestion des RDVs</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+    </property>
+    <property name="text">
+     <string>Gestion des equipements</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>280</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+    </property>
+    <property name="text">
+     <string>Gestion des vehicules</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+    </property>
+    <property name="text">
+     <string>Gestion des services</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>-1000</x>
+      <y>0</y>
+      <width>1291</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../332319502_992673331694691_7199529608011094507_n (1).jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>100</y>
+      <width>91</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>image/img1.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>260</y>
+      <width>56</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>-1000</x>
+      <y>0</y>
+      <width>1541</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Downloads/332319502_992673331694691_7199529608011094507_n (2).jpg</pixmap>
+    </property>
+   </widget>
+   <zorder>label_4</zorder>
+   <zorder>label</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>pushButton_3</zorder>
+   <zorder>pushButton_4</zorder>
+   <zorder>pushButton_5</zorder>
+   <zorder>pushButton_6</zorder>
+   <zorder>pushButton_7</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
