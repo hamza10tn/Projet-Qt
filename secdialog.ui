@@ -50,26 +50,13 @@
       <property name="title">
        <string>GroupBox</string>
       </property>
-      <widget class="QPushButton" name="pushButton_11">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>330</y>
-         <width>451</width>
-         <height>28</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>load table</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="pushButton_12">
        <property name="geometry">
         <rect>
-         <x>140</x>
-         <y>390</y>
-         <width>451</width>
-         <height>28</height>
+         <x>30</x>
+         <y>317</y>
+         <width>261</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="text">
@@ -79,10 +66,10 @@
       <widget class="QGroupBox" name="groupBox_5">
        <property name="geometry">
         <rect>
-         <x>510</x>
-         <y>50</y>
-         <width>181</width>
-         <height>151</height>
+         <x>550</x>
+         <y>120</y>
+         <width>171</width>
+         <height>101</height>
         </rect>
        </property>
        <property name="title">
@@ -91,24 +78,14 @@
        <widget class="QPushButton" name="pushButton_13">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>90</y>
+          <x>60</x>
+          <y>50</y>
           <width>93</width>
           <height>28</height>
          </rect>
         </property>
         <property name="text">
          <string>Trier</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_10">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>60</y>
-          <width>113</width>
-          <height>22</height>
-         </rect>
         </property>
        </widget>
       </widget>
@@ -154,12 +131,36 @@
         <pixmap>../../Downloads/332319502_992673331694691_7199529608011094507_n (1).jpg</pixmap>
        </property>
       </widget>
+      <widget class="QTextBrowser" name="textBrowser">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>90</y>
+         <width>261</width>
+         <height>191</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="geometry">
+        <rect>
+         <x>482</x>
+         <y>300</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Faire le statistique</string>
+       </property>
+      </widget>
       <zorder>label_18</zorder>
-      <zorder>pushButton_11</zorder>
       <zorder>pushButton_12</zorder>
       <zorder>groupBox_5</zorder>
       <zorder>pushButton_15</zorder>
       <zorder>pushButton_17</zorder>
+      <zorder>textBrowser</zorder>
+      <zorder>pushButton_10</zorder>
      </widget>
     </widget>
     <widget class="QWidget" name="page_2">
@@ -607,6 +608,16 @@ QLineEdit {
        </property>
        <item>
         <property name="text">
+         <string>Admin</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ResponsableClient</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string>Technicien</string>
         </property>
        </item>
@@ -772,17 +783,27 @@ opacity: 200;
         </property>
         <item>
          <property name="text">
+          <string>Admin</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ResponsableClient</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Technicien</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Technicien superieur</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
           <string>inginieur</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>technicien</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>technicien superieur</string>
          </property>
         </item>
        </widget>
@@ -1158,9 +1179,9 @@ opacity: 200;
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>10</y>
+         <y>20</y>
          <width>1991</width>
-         <height>511</height>
+         <height>501</height>
         </rect>
        </property>
        <property name="text">
@@ -1180,7 +1201,21 @@ opacity: 200;
         </rect>
        </property>
       </widget>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>350</y>
+         <width>201</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Rechercher </string>
+       </property>
+      </widget>
       <zorder>label_17</zorder>
+      <zorder>groupBox_6</zorder>
       <zorder>groupBox_4</zorder>
       <zorder>groupBox_7</zorder>
       <zorder>tableView</zorder>

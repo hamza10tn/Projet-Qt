@@ -4,6 +4,11 @@ CONFIG +=console
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
+QT += printsupport
+QT       += charts
+QT       += serialport
+QT       += axcontainer
+QT += network
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -23,7 +28,11 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
-    secdialog.cpp
+    recuperermotdepasse.cpp \
+    secdialog.cpp \
+    sendmailer.cpp \
+    sessionuser.cpp \
+    stat_combo.cpp
 
 HEADERS += \
     connection.h \
@@ -31,12 +40,18 @@ HEADERS += \
     login.h \
     mainwindow.h \
     menu.h \
-    secdialog.h
+    recuperermotdepasse.h \
+    secdialog.h \
+    sendmailer.h \
+    sessionuser.h \
+    stat_combo.h
 
 FORMS += \
     mainwindow.ui \
     menu.ui \
-    secdialog.ui
+    recuperermotdepasse.ui \
+    secdialog.ui \
+    stat_combo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

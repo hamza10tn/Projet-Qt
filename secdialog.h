@@ -5,6 +5,9 @@
 #include <QMessageBox>
 #include <QSqlDatabase>
 #include "employes.h"
+#include <QProgressBar>
+#include <QSlider>
+#include "stat_combo.h"
 QT_BEGIN_NAMESPACE
 namespace Ui {
 
@@ -77,9 +80,22 @@ private slots:
 
     void on_lineEdit_8_textEdited(const QString &arg1);
 
+    void on_pushButton_13_clicked();
+
+    void on_pushButton_12_clicked();
+
+    void on_comboBox_3_textHighlighted(const QString &arg1);
+
+    void on_comboBox_3_currentTextChanged(const QString &arg1);
+
 private:
     Ui::secDialog *ui;
     Employes i;
+    stat_combo *s;
+    QProgressBar* bar;
+    QSlider* slider;
+    QByteArray data;
+     QByteArray data1;
 };
 
 #endif // SECDIALOG_H

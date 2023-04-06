@@ -3,6 +3,13 @@
 #include<QDebug>
 #include<QMessageBox>
 #include "employes.h"
+#include"QtPrintSupport/QPrinter"
+#include"QPdfWriter"
+
+//#include <QPrinter>
+#include <QPainter>
+
+
 
 secDialog::secDialog(QWidget *parent) :
     QDialog(parent),
@@ -156,8 +163,8 @@ void secDialog::on_pushButton_16_clicked()
     ui->comboBox_2->setCurrentText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->currentIndex().row(),4)).toString());
 
      ui->age->setText(QString::number(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->currentIndex().row(),5)).toInt()));
-      ui->pwd->setText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->currentIndex().row(),6)).toString());
-       ui->salaire->setText(QString::number(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->currentIndex().row(),7)).toFloat()));
+     ui->pwd->setText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->currentIndex().row(),6)).toString());
+     ui->salaire->setText(QString::number(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->currentIndex().row(),7)).toFloat()));
 
 
 
@@ -351,9 +358,35 @@ void secDialog::on_age_textEdited(const QString &arg1)
          return;
      }
 }
-
+//recherche
 
 void secDialog::on_lineEdit_8_textEdited(const QString &arg1)
 {
        ui->tableView->setModel(i.Recherche(arg1));
+}
+//tri
+
+void secDialog::on_pushButton_13_clicked()
+{
+     ui->tableView->setModel(i.triAge()) ;
+}
+
+void secDialog::on_pushButton_12_clicked()
+{
+
+     i.exporterpdf(ui->textBrowser);
+}
+
+
+
+
+
+void secDialog::on_pushButton_10_clicked()
+{
+    s=new stat_combo();
+    s->setWindowTitle("statistique ");
+    s->choix_pie();
+    s->show();
+
+
 }

@@ -20,6 +20,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_GestionEmployeBtn_clicked();
+
 private:
     Ui::menu *ui;
 };

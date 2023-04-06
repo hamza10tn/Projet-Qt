@@ -266,6 +266,19 @@ opacity: 200;</string>
       <string>clear</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>20</y>
+       <width>141</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mot de passe oublie ? </string>
+     </property>
+    </widget>
     <zorder>label</zorder>
     <zorder>lineEdit_username</zorder>
     <zorder>lineEdit_password</zorder>
@@ -279,6 +292,7 @@ opacity: 200;</string>
     <zorder>label_5</zorder>
     <zorder>label_6</zorder>
     <zorder>pushButton</zorder>
+    <zorder>pushButton_2</zorder>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">

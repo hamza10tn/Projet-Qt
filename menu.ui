@@ -25,7 +25,10 @@
    <property name="title">
     <string>Menu</string>
    </property>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="AccountMenuBtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -47,7 +50,10 @@ opacity: 200;
      <string>Account</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="GestionEmployeBtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -69,7 +75,10 @@ opacity: 200;
      <string>Gestion des employees</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="GestionClientBtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -91,7 +100,10 @@ opacity: 200;
      <string>Gestion des clients</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="GestionDesRdvbtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -113,7 +125,10 @@ opacity: 200;
      <string>Gestion des RDVs</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="GestionDesEqbtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -135,7 +150,10 @@ opacity: 200;
      <string>Gestion des equipements</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="GestionDesVehiculebtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -157,7 +175,10 @@ opacity: 200;
      <string>Gestion des vehicules</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="GestionDesServicebtn">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -245,13 +266,13 @@ opacity: 200;
    </widget>
    <zorder>label_4</zorder>
    <zorder>label</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>pushButton_3</zorder>
-   <zorder>pushButton_4</zorder>
-   <zorder>pushButton_5</zorder>
-   <zorder>pushButton_6</zorder>
-   <zorder>pushButton_7</zorder>
+   <zorder>AccountMenuBtn</zorder>
+   <zorder>GestionEmployeBtn</zorder>
+   <zorder>GestionClientBtn</zorder>
+   <zorder>GestionDesRdvbtn</zorder>
+   <zorder>GestionDesEqbtn</zorder>
+   <zorder>GestionDesVehiculebtn</zorder>
+   <zorder>GestionDesServicebtn</zorder>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
   </widget>
