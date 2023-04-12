@@ -8,6 +8,7 @@
 #include <QProgressBar>
 #include <QSlider>
 #include "stat_combo.h"
+#include<QTableView>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 
@@ -88,6 +89,18 @@ private slots:
 
     void on_comboBox_3_currentTextChanged(const QString &arg1);
 
+    void on_stackedWidget_currentChanged(int index);
+
+    void on_pushButton_11_clicked();
+
+    void on_pushButton_19_clicked();
+
+    void on_lineEdit_8_cursorPositionChanged(int arg1, int arg2);
+
+    void on_lineEdit_9_textEdited(const QString &arg1);
+
+    void on_pushButton_20_clicked();
+
 private:
     Ui::secDialog *ui;
     Employes i;
@@ -96,6 +109,8 @@ private:
     QSlider* slider;
     QByteArray data;
      QByteArray data1;
+     QTableView* tableView;
+
 };
 
 #endif // SECDIALOG_H

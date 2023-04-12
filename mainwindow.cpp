@@ -57,10 +57,59 @@ void MainWindow::on_pushButton_clicked()
     ui->lineEdit_password->setText("");
 }
 
-void MainWindow::on_pushButton_2_clicked()
-{recuperermotdepasse Recuperermotdepasse;
-    Recuperermotdepasse.setModal(true);
-    Recuperermotdepasse.exec();
 
+
+void MainWindow::on_pb_mdpOublie_clicked()
+{
+
+        ui->stackedWidget->setCurrentIndex(1);
 
 }
+
+void MainWindow::on_pushButton_3_clicked()
+{
+        QString EMAIL = ui->lineEdit_username_2->text();
+        QString reponse = ui->lineEdit_reponse->text();
+        QSqlQuery query;
+        query.prepare("SELECT REPONSE_QS FROM EMPLOYES WHERE EMAIL = :EMAIL");
+        query.bindValue(":EMAIL", EMAIL);
+        query.exec();
+        if (query.next())
+        {
+            QString Reponse_qs = query.value(0).toString();
+            if (reponse == Reponse_qs)
+            {
+                // La réponse est correcte, on ouvre la fenêtre pour changer le mot de passe
+                ui->stackedWidget->setCurrentIndex(2);
+            }
+            else
+            {
+                QMessageBox::information(nullptr, QObject::tr("ERREUR"),
+                    QObject::tr("LA RÉPONSE À LA QUESTION SECRÈTE EST INCORRECTE.\nCLIQUEZ SUR ANNULER POUR REVENIR."), QMessageBox::Ok);
+            }
+        }
+    }
+
+
+
+void MainWindow::on_btn_changerMdp_clicked()
+{
+         QString EMAIL = ui->lineEdit_username1->text();
+        QString PWD = ui->lineEdit_password_2->text();
+        QSqlQuery query;
+        query.prepare("UPDATE EMPLOYES SET PWD = :PWD WHERE EMAIL = :EMAIL");
+        query.bindValue(":PWD", PWD);
+        query.bindValue(":EMAIL", EMAIL);
+        if (query.exec())
+        {
+            QMessageBox::information(nullptr, QObject::tr("SUCCÈS"),
+                QObject::tr("LE MOT DE PASSE A ÉTÉ CHANGÉ AVEC SUCCÈS.\nCLIQUEZ SUR ANNULER POUR REVENIR."), QMessageBox::Ok);
+            ui->stackedWidget->setCurrentIndex(0);
+        }
+        else
+        {
+            QMessageBox::information(nullptr, QObject::tr("ERREUR"),
+                QObject::tr("UNE ERREUR S'EST PRODUITE LORS DU CHANGEMENT DE MOT DE PASSE.\nCLIQUEZ SUR ANNULER POUR REVENIR."), QMessageBox::Ok);
+        }
+    }
+

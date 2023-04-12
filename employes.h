@@ -12,14 +12,15 @@ class Employes
 
 private:
 int IDEMP;
-QString NOM,PRENOM,EMAIL,POSTE;
+QString NOM,PRENOM,EMAIL,POSTE,REPONSE_QS, QUESTION_SECRETE;
 int AGE;
 QString PWD;
 float SALAIRE;
 
+
 public:
     Employes ();
-    Employes(int ,QString,QString,QString,QString,int,QString,float);
+    Employes(int ,QString,QString,QString,QString,int,QString,float,QString,QString);
 
     bool ajouter();
    QSqlQueryModel * afficher();
@@ -27,7 +28,10 @@ public:
    bool modifier(int );
    QSqlQueryModel *Recherche(QString );
    QSqlQueryModel* triAge();
+    QSqlQueryModel* trisalaire();
   void exporterpdf(QTextBrowser *text);
+  void statistiqueSegment();
+  void imprimer(QTextEdit* widget);
 
 
 
@@ -41,6 +45,10 @@ public:
     int getAGE();
     QString getPWD();
     float getSALAIRE();
+    QString getREPONSE_QS();
+    QString getQUESTION_SECRETE();
+
+
     void setID(int );
     void setNOM(QString );
     void setPRENOM(QString );
@@ -49,6 +57,8 @@ public:
     void setAGE(int );
     void setPWD(QString );
     void setSALAIRE(float );
+    void setREPONSE_QS(QString );
+    void setQUESTION_SECRETE(QString );
     bool verifEmailAndId(int id,QString email);
 
 

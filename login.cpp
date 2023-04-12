@@ -13,7 +13,7 @@ bool login::connect(int IDEMP, QString PWD)
     query.bindValue(":pwd", PWD);
     if (query.exec() && query.next()) {
         // The query executed successfully and returned at least one result
-        Employes *e=new Employes(query.value("IDEMP").toInt(),query.value("NOM").toString(),query.value("PRENOM").toString(),query.value("EMAIL").toString(),query.value("POSTE").toString(),query.value("AGE").toInt(),query.value("PWD").toString(),query.value("SALAIRE").toFloat());
+        Employes *e=new Employes(query.value("IDEMP").toInt(),query.value("NOM").toString(),query.value("PRENOM").toString(),query.value("EMAIL").toString(),query.value("POSTE").toString(),query.value("AGE").toInt(),query.value("PWD").toString(),query.value("SALAIRE").toFloat(),query.value("REPONSE_QS").toString(),query.value("QUESTION_SECRETE").toString());
         qDebug()<<e->getPOSTE();
         SessionUser::getInstance()->setConnectedUser(e);
 

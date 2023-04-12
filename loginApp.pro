@@ -28,11 +28,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
-    recuperermotdepasse.cpp \
     secdialog.cpp \
-    sendmailer.cpp \
-    sessionuser.cpp \
-    stat_combo.cpp
+    sessionuser.cpp
 
 HEADERS += \
     connection.h \
@@ -40,18 +37,13 @@ HEADERS += \
     login.h \
     mainwindow.h \
     menu.h \
-    recuperermotdepasse.h \
     secdialog.h \
-    sendmailer.h \
-    sessionuser.h \
-    stat_combo.h
+    sessionuser.h
 
 FORMS += \
     mainwindow.ui \
     menu.ui \
-    recuperermotdepasse.ui \
-    secdialog.ui \
-    stat_combo.ui
+    secdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
