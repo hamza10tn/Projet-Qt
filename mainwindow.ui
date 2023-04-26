@@ -276,6 +276,62 @@ opacity: 200;</string>
         <string>Mot de passe oublie ? </string>
        </property>
       </widget>
+      <widget class="QPushButton" name="pushButton_login_2">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>390</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+       </property>
+       <property name="text">
+        <string>arduino</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_password_3">
+       <property name="geometry">
+        <rect>
+         <x>520</x>
+         <y>340</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+      color: rgb(251, 252, 2521);
+      font: 10pt &quot;Verdana&quot;;
+      border: None;
+      border-bottom-color: white;
+      border-radius: 10px;
+      padding: 0 8px;
+      background: rgb(251, 252, 252);
+      selection-background-color: darkgray;
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="dragEnabled">
+        <bool>false</bool>
+       </property>
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="page_2">

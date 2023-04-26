@@ -17,7 +17,33 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_pic->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
     ui->statusbar->addPermanentWidget(ui->label_3);
     ui->statusbar->addPermanentWidget(ui->progressBar);
+    int ret=A.connect_arduino(); // lancer la connexion à arduino
+
+    switch(ret){
+    case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+        break;
+    case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+       break;
+    case(-1):qDebug() << "arduino is not available";
+    }
+     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+     //le slot update_label suite à la reception du signal readyRead (reception des données).
+
+
+
+
+
 }
+void MainWindow::on_pushButton_login_2_clicked()
+{qDebug() << "d5alet";
+  QString id=  ui->lineEdit_password_3->text();
+  if(A.chercherid(id)==1){
+      A.write_to_arduino("0");
+qDebug() << "l9iyo";
+  }
+
+}
+
 
 MainWindow::~MainWindow()
 {
@@ -84,12 +110,11 @@ void MainWindow::on_pushButton_3_clicked()
             }
             else
             {
-                QMessageBox::information(nullptr, QObject::tr("ERREUR"),
-                    QObject::tr("LA RÉPONSE À LA QUESTION SECRÈTE EST INCORRECTE.\nCLIQUEZ SUR ANNULER POUR REVENIR."), QMessageBox::Ok);
-            }
+                QMessageBox::information(nullptr, QObject::tr("Erreur"),
+                    QObject::tr("Mot de passe incorrect.\nverifier."), QMessageBox::Ok);
         }
     }
-
+}
 
 
 void MainWindow::on_btn_changerMdp_clicked()
@@ -112,4 +137,6 @@ void MainWindow::on_btn_changerMdp_clicked()
                 QObject::tr("UNE ERREUR S'EST PRODUITE LORS DU CHANGEMENT DE MOT DE PASSE.\nCLIQUEZ SUR ANNULER POUR REVENIR."), QMessageBox::Ok);
         }
     }
+
+
 

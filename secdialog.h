@@ -9,6 +9,8 @@
 #include <QSlider>
 #include "stat_combo.h"
 #include<QTableView>
+#include"arduino.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 
@@ -25,6 +27,7 @@ public:
 
 private slots:
 
+    void update_label();
 
     void on_pushButton_9_clicked();
 
@@ -110,6 +113,7 @@ private:
     QByteArray data;
      QByteArray data1;
      QTableView* tableView;
+     Arduino A;
 
 };
 

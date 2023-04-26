@@ -642,6 +642,50 @@ opacity: 200;
         <string>QUESTION</string>
        </property>
       </widget>
+      <widget class="QLineEdit" name="rp_2">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>20</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+      color: rgb(251, 252, 2521);
+      font: 10pt &quot;Verdana&quot;;
+      border: None;
+      border-bottom-color: white;
+      border-radius: 10px;
+      padding: 0 8px;
+      background: rgb(251, 252, 252);
+      selection-background-color: darkgray;
+}</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="geometry">
+        <rect>
+         <x>760</x>
+         <y>50</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: black;
+font: 7pt &quot;Verdana&quot;;
+border: 2px solid rgb(255, 0, 127);
+padding: 5px;
+border-radius: 3px;
+opacity: 200;
+</string>
+       </property>
+       <property name="text">
+        <string>arduino</string>
+       </property>
+      </widget>
       <zorder>label_16</zorder>
       <zorder>lineEdit</zorder>
       <zorder>lineEdit_2</zorder>
@@ -665,6 +709,8 @@ opacity: 200;
       <zorder>qs</zorder>
       <zorder>label_19</zorder>
       <zorder>label_20</zorder>
+      <zorder>rp_2</zorder>
+      <zorder>pushButton_11</zorder>
      </widget>
     </widget>
     <widget class="QWidget" name="page_3">

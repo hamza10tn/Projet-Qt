@@ -8,7 +8,7 @@ SessionUser::SessionUser()
     ConnectedUser=nullptr;
 
 }
-
+//recuperi l emploues connecte
 Employes* SessionUser::getConnectedUser() {
        return ConnectedUser;
    }
@@ -17,7 +17,7 @@ Employes* SessionUser::getConnectedUser() {
 void SessionUser::setConnectedUser(Employes* employe) {
        ConnectedUser = employe;
 }
-
+//trajaali l instance unique
 SessionUser* SessionUser::getInstance()
 {
             if(Instance==nullptr){

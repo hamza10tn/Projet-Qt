@@ -7,6 +7,7 @@
 #include <QSqlDatabase>
 #include "employes.h"
 #include"login.h"
+#include"arduino.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,13 +26,14 @@ private slots:
 
     void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
 
     void on_pb_mdpOublie_clicked();
 
     void on_pushButton_3_clicked();
 
     void on_btn_changerMdp_clicked();
+
+    void on_pushButton_login_2_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -41,6 +43,6 @@ private:
 
         Employes i;
         login l;
-
-};
+        Arduino A;
+ };
 #endif // MAINWINDOW_H
