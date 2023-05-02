@@ -3,12 +3,14 @@
 #include <QSqlQueryModel>
 #include <QSqlDatabase>
 #include <QObject>
+//QSerialPort est une classe de la bibliothèque Qt qui permet de communiquer avec un port série, tel que celui utilisé pour la communication avec une carte Arduino.
 Arduino::Arduino()
 {
-    data="";
+   // data="";
     arduino_port_name="";
     arduino_is_available=false;
     serial=new QSerialPort;
+    //Cet objet est utilisé pour communiquer avec l'Arduino via un port série.
 }
 
 QString Arduino::getarduino_port_name()
@@ -20,11 +22,14 @@ QSerialPort *Arduino::getserial()
 {
    return serial;
 }
+//connect a une carte arduino
 int Arduino::connect_arduino()
 {   // recherche du port sur lequel la carte arduino identifée par  arduino_uno_vendor_id
     // est connectée
     serialbuffer="";
+    //parcourt lel port pour voir le port disponible
     foreach (const QSerialPortInfo &serial_port_info, QSerialPortInfo::availablePorts()){
+        //elle vérifie si celui-ci possède un identifiant de vendeur et de produit correspondant à ceux d'une carte Arduino Uno. Si c'est le cas, elle enregistre le nom du port série et met à jour la variable "arduino_is_available" à "true".
            if(serial_port_info.hasVendorIdentifier() && serial_port_info.hasProductIdentifier()){
                if(serial_port_info.vendorIdentifier() == arduino_uno_vendor_id && serial_port_info.productIdentifier()
                        == arduino_uno_producy_id) {
@@ -44,9 +49,9 @@ int Arduino::connect_arduino()
             }
             return 1;
         }
-        return -1;
+        return -1;//carte arduino n'a ete trouve
 }
-
+//arrreter la communiction serie avec la carte arduino
 int Arduino::close_arduino()
 
 {
@@ -84,10 +89,10 @@ int Arduino::close_arduino()
          }
 
  }
- QByteArray Arduino::getdata()
+/* QByteArray Arduino::getdata()
  {
      return data;
- }
+ }*/
 int Arduino::write_to_arduino( QByteArray d)
 
 {

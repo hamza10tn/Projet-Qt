@@ -3,6 +3,7 @@
 #include<QDebug>
 #include <QDialog>
 #include <QSqlDatabase>
+
 namespace Ui {
 class menu;
 }
@@ -22,8 +23,11 @@ private slots:
 
     void on_GestionEmployeBtn_clicked();
 
+    void on_AccountMenuBtn_clicked();
+
 private:
     Ui::menu *ui;
+
 };
 
 #endif // MENU_H

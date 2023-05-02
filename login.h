@@ -8,6 +8,10 @@
 #include "menu.h"
 #include <QSqlDatabase>
 #include <QMainWindow>
+#include <QDialog>
+#include"menu.h"
+
+
 
 class login
 {

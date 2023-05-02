@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
        break;
     case(-1):qDebug() << "arduino is not available";
     }
-     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+    // QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
      //le slot update_label suite à la reception du signal readyRead (reception des données).
 
 
@@ -35,10 +35,12 @@ MainWindow::MainWindow(QWidget *parent)
 
 }
 void MainWindow::on_pushButton_login_2_clicked()
-{qDebug() << "d5alet";
+{
+  qDebug() << "d5alet";
   QString id=  ui->lineEdit_password_3->text();
   if(A.chercherid(id)==1){
-      A.write_to_arduino("0");
+  A.write_to_arduino("0");
+      //Cette méthode permet d'écrire le caractère "0" sur le port série pour communiquer avec la carte Arduino.
 qDebug() << "l9iyo";
   }
 

@@ -422,107 +422,7 @@ void secDialog::on_pushButton_12_clicked()
 
 void secDialog::on_pushButton_10_clicked()
 {
-    QPrinter printer;
 
-        QPrintDialog dialog(&printer, this);
-        if (dialog.exec() != QDialog::Accepted) {
-            return;
-        }
-
-        QPainter painter(&printer);
-        QRect rect = painter.viewport();
-        QSize size = tableView->size();
-        size.scale(rect.size(), Qt::KeepAspectRatio);
-        painter.setViewport(rect.x(), rect.y(), size.width(), size.height());
-        painter.setWindow(tableView->rect());
-        tableView->render(&painter);}
-
-
-
-void secDialog::on_stackedWidget_currentChanged(int index)
-{
-
-        // Effacer le texte affiché dans le label nommé label_stat
-        ui->label_stat->clear();
-
-        // Si l'index est égal à 2, cela signifie que l'utilisateur a sélectionné l'onglet approprié
-        if (index == 3 )
-        {
-            // Supprimer tous les widgets contenus dans le layout vertical nommé verticalLayout
-            QLayoutItem* child;
-            while ((child = ui->verticalLayout->takeAt(0)) != nullptr) {
-                delete child->widget();
-                delete child;
-            }
-
-            // Exécuter une requête SQL pour compter le nombre d'employés dont le salaire est supérieur à 1500
-            QSqlQuery query("SELECT COUNT(*) FROM EMPLOYES WHERE SALAIRE > 1500");
-            query.next();
-            int nbSUP = query.value(0).toInt();
-
-            // Exécuter une requête SQL pour compter le nombre d'employés dont le salaire est inférieur à 1500
-            query.exec("SELECT COUNT(*) FROM  EMPLOYES WHERE SALAIRE < 1500");
-            query.next();
-            int nbINF = query.value(0).toInt();
-
-            // Calculer les pourcentages de chaque groupe
-            qreal total = nbSUP + nbINF;
-            qreal pourcentageSUP = nbSUP / total * 100;
-            qreal pourcentageINF = nbINF / total * 100;
-//QBarSet contient les barres graphiques
-            // Créer des barres pour le graphique
-            //Chaque QBarSet contient le nombre d'employés correspondant à chaque groupe.
-            QBarSet *setSUP = new QBarSet("SUPERIEUR 1500");
-            *setSUP << nbSUP;
-
-            QBarSet *setINF = new QBarSet("INFERIEUR 1500");
-            *setINF << nbINF;
-
-            // Créer une série de barres pour le graphique
-            //regrouper les deux QBarest
-            QBarSeries *series = new QBarSeries();
-            series->append(setSUP);
-            series->append(setINF);
-
-            // Créer un graphique à barres
-            QChart *chart = new QChart();
-            chart->addSeries(series);
-            chart->setTitle("Répartition des EMPLOYES selon le salaire");
-            chart->createDefaultAxes();
-
-            // Personnaliser l'axe horizontal du graphique
-            QBarCategoryAxis *axisX = qobject_cast<QBarCategoryAxis *>(chart->axes(Qt::Horizontal).at(0));
-            axisX->setTitleText("SALAIRE");
-            axisX->append("Superieur 1500");
-            axisX->append("INFERIEUR 1500");
-
-            // Personnaliser l'axe vertical du graphique
-            QValueAxis *axisY = qobject_cast<QValueAxis *>(chart->axes(Qt::Vertical).at(0));
-            axisY->setLabelFormat("%.0f");
-            axisY->setTitleText("Nombre de EMPLOYES");
-            axisY->setRange(0, total + 1);
-            axisY->setTickCount(total + 2);
-
-            // Créer une vue pour le graphique
-            QChartView *chartView = new QChartView(chart);
-            chartView->setRenderHint(QPainter::Antialiasing);
-
-            // Ajouter la vue dans le layout vertical nommé verticalLayout
-            ui->verticalLayout->addWidget(chartView);
-
-            // Afficher les pourcentages dans un label nommé label_stat
-
-
-
-            // Affichage des pourcentages dans un QLabel
-            ui->label_stat->setText(QString("SUPERIEUR 1500 : %1 (%2 %)\nINFERIEUR 1500 : %3 (%4 %)")
-                                       .arg(nbSUP)
-                                       .arg(QString::number(pourcentageSUP, 'f', 2))
-                                       .arg(nbINF)
-                                       .arg(QString::number(pourcentageINF, 'f', 2)));
-
-
-        }
 }
 
 
@@ -554,5 +454,102 @@ void secDialog::on_pushButton_20_clicked()
 }
 
 
+
+
+
+void secDialog::on_pushButton_21_clicked()
+{
+    this->hide();
+
+     menu Menu;
+     Menu.setModal(true);
+     Menu.exec() ;
+}
+
+void secDialog::on_stackedWidget_currentChanged(int index)
+{
+
+    // Effacer le texte affiché dans le label nommé label_stat
+    ui->label_stat->clear();
+
+    // Si l'index est égal à 2, cela signifie que l'utilisateur a sélectionné l'onglet approprié
+    if (index == 3 )
+    {
+        // Supprimer tous les widgets contenus dans le layout vertical nommé verticalLayout
+        QLayoutItem* child;
+        while ((child = ui->verticalLayout->takeAt(0)) != nullptr) {
+            delete child->widget();
+            delete child;
+        }
+
+        // Exécuter une requête SQL pour compter le nombre d'employés dont le salaire est supérieur à 1500
+        QSqlQuery query("SELECT COUNT(*) FROM EMPLOYES WHERE SALAIRE > 1500");
+        query.next();
+        int nbSUP = query.value(0).toInt();
+
+        // Exécuter une requête SQL pour compter le nombre d'employés dont le salaire est inférieur à 1500
+        query.exec("SELECT COUNT(*) FROM  EMPLOYES WHERE SALAIRE < 1500");
+        query.next();
+        int nbINF = query.value(0).toInt();
+
+        // Calculer les pourcentages de chaque groupe
+        qreal total = nbSUP + nbINF;
+        qreal pourcentageSUP = nbSUP / total * 100;
+        qreal pourcentageINF = nbINF / total * 100;
+//QBarSet contient les barres graphiques
+        // Créer des barres pour le graphique
+        //Chaque QBarSet contient le nombre d'employés correspondant à chaque groupe.
+        QBarSet *setSUP = new QBarSet("SUPERIEUR 1500");
+        *setSUP << nbSUP;
+
+        QBarSet *setINF = new QBarSet("INFERIEUR 1500");
+        *setINF << nbINF;
+
+        // Créer une série de barres pour le graphique
+        //regrouper les deux QBarest
+        QBarSeries *series = new QBarSeries();
+        series->append(setSUP);
+        series->append(setINF);
+
+        // Créer un graphique à barres
+        QChart *chart = new QChart();
+        chart->addSeries(series);
+        chart->setTitle("Répartition des EMPLOYES selon le salaire");
+        chart->createDefaultAxes();
+
+        // Personnaliser l'axe horizontal du graphique
+        QBarCategoryAxis *axisX = qobject_cast<QBarCategoryAxis *>(chart->axes(Qt::Horizontal).at(0));
+        axisX->setTitleText("SALAIRE");
+        axisX->append("Superieur 1500");
+        axisX->append("INFERIEUR 1500");
+
+        // Personnaliser l'axe vertical du graphique
+        QValueAxis *axisY = qobject_cast<QValueAxis *>(chart->axes(Qt::Vertical).at(0));
+        axisY->setLabelFormat("%.0f");
+        axisY->setTitleText("Nombre de EMPLOYES");
+        axisY->setRange(0, total + 1);
+        axisY->setTickCount(total + 2);
+
+        // Créer une vue pour le graphique
+        QChartView *chartView = new QChartView(chart);
+        chartView->setRenderHint(QPainter::Antialiasing);
+
+        // Ajouter la vue dans le layout vertical nommé verticalLayout
+        ui->verticalLayout->addWidget(chartView);
+
+        // Afficher les pourcentages dans un label nommé label_stat
+
+
+
+        // Affichage des pourcentages dans un QLabel
+        ui->label_stat->setText(QString("SUPERIEUR 1500 : %1 (%2 %)\nINFERIEUR 1500 : %3 (%4 %)")
+                                   .arg(nbSUP)
+                                   .arg(QString::number(pourcentageSUP, 'f', 2))
+                                   .arg(nbINF)
+                                   .arg(QString::number(pourcentageINF, 'f', 2)));
+
+
+    }
+}
 
 

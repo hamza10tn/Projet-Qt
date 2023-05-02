@@ -12,7 +12,7 @@ class Arduino
 {
 public:     //méthodes de la classe Arduino
     Arduino();
-     int updatee(QString id);
+     //int updatee(QString id);
     QByteArray getdata();
     int connect_arduino(); // permet de connecter le PC à Arduino
     int close_arduino(); // permet de femer la connexion

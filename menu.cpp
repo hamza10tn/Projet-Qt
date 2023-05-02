@@ -4,6 +4,10 @@
 #include<QDebug>
 #include "connection.h"
 #include "sessionuser.h"
+#include "login.h"
+#include <QDialog>
+#include "mainwindow.h"
+
 menu::menu(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::menu)
@@ -14,7 +18,7 @@ menu::menu(QWidget *parent) :
     if(poste=="Admin"){
         qDebug()<<"enter";
 
-        ui->AccountMenuBtn->setDisabled(false);
+        //ui->AccountMenuBtn->setDisabled(false);
         ui->GestionDesEqbtn->setDisabled(false);
         ui->GestionClientBtn->setDisabled(false);
         ui->GestionDesRdvbtn->setDisabled(false);
@@ -52,4 +56,10 @@ void menu::on_GestionEmployeBtn_clicked()
     secDialog SecDialog;
    SecDialog.setModal(true);
     SecDialog.exec();
+}
+
+void menu::on_AccountMenuBtn_clicked()
+{
+
+
 }

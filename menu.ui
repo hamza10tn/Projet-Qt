@@ -25,31 +25,6 @@
    <property name="title">
     <string>Menu</string>
    </property>
-   <widget class="QPushButton" name="AccountMenuBtn">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>231</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;
-</string>
-    </property>
-    <property name="text">
-     <string>Account</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="GestionEmployeBtn">
     <property name="enabled">
      <bool>false</bool>
@@ -58,17 +33,28 @@ opacity: 200;
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>231</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;
+     <string notr="true">button {
+  background-color: #4CAF50; /* couleur de fond normale */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41; /* couleur de fond lorsqu'on survole */
+  color: white;
+}
 </string>
     </property>
     <property name="text">
@@ -83,17 +69,29 @@ opacity: 200;
      <rect>
       <x>10</x>
       <y>130</y>
-      <width>231</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;
+     <string notr="true">button {
+  background-color: #4CAF50; /* couleur de fond normale */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41; /* couleur de fond lorsqu'on survole */
+  color: white;
+}
+
 </string>
     </property>
     <property name="text">
@@ -108,17 +106,29 @@ opacity: 200;
      <rect>
       <x>10</x>
       <y>180</y>
-      <width>231</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;
+     <string notr="true">button {
+  background-color: #4CAF50; /* couleur de fond normale */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41; /* couleur de fond lorsqu'on survole */
+  color: white;
+}
+
 </string>
     </property>
     <property name="text">
@@ -133,17 +143,29 @@ opacity: 200;
      <rect>
       <x>10</x>
       <y>230</y>
-      <width>231</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;
+     <string notr="true">button {
+  background-color: #4CAF50; /* couleur de fond normale */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41; /* couleur de fond lorsqu'on survole */
+  color: white;
+}
+
 </string>
     </property>
     <property name="text">
@@ -158,17 +180,28 @@ opacity: 200;
      <rect>
       <x>10</x>
       <y>280</y>
-      <width>231</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;
+     <string notr="true">button {
+  background-color: #4CAF50; /* couleur de fond normale */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41; /* couleur de fond lorsqu'on survole */
+  color: white;
+}
 </string>
     </property>
     <property name="text">
@@ -183,17 +216,29 @@ opacity: 200;
      <rect>
       <x>10</x>
       <y>330</y>
-      <width>231</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;
+     <string notr="true">button {
+  background-color: #4CAF50; /* couleur de fond normale */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41; /* couleur de fond lorsqu'on survole */
+  color: white;
+}
+
 </string>
     </property>
     <property name="text">
@@ -219,8 +264,8 @@ opacity: 200;
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>100</y>
+      <x>400</x>
+      <y>110</y>
       <width>91</width>
       <height>131</height>
      </rect>
@@ -266,7 +311,6 @@ opacity: 200;
    </widget>
    <zorder>label_4</zorder>
    <zorder>label</zorder>
-   <zorder>AccountMenuBtn</zorder>
    <zorder>GestionEmployeBtn</zorder>
    <zorder>GestionClientBtn</zorder>
    <zorder>GestionDesRdvbtn</zorder>

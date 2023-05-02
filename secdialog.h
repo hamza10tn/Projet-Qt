@@ -10,6 +10,7 @@
 #include "stat_combo.h"
 #include<QTableView>
 #include"arduino.h"
+#include"menu.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -104,6 +105,10 @@ private slots:
 
     void on_pushButton_20_clicked();
 
+    void on_pushButton_21_clicked();
+
+    void on_stackedWidget_objectNameChanged(const QString &objectName);
+
 private:
     Ui::secDialog *ui;
     Employes i;
@@ -114,6 +119,7 @@ private:
      QByteArray data1;
      QTableView* tableView;
      Arduino A;
+    menu *Menu ;
 
 };
 
