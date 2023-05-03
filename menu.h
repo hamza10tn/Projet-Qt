@@ -3,6 +3,8 @@
 #include<QDebug>
 #include <QDialog>
 #include <QSqlDatabase>
+#include "rdv.h"
+#include "jawher.h"
 
 namespace Ui {
 class menu;
@@ -25,8 +27,16 @@ private slots:
 
     void on_AccountMenuBtn_clicked();
 
+    void on_GestionDesRdvbtn_clicked();
+
+    void on_GestionClientBtn_clicked();
+
+    void on_GestionDesEqbtn_clicked();
+
 private:
     Ui::menu *ui;
+    rdv *r;
+    jawher *j;
 
 };
 

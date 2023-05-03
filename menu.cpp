@@ -7,6 +7,7 @@
 #include "login.h"
 #include <QDialog>
 #include "mainwindow.h"
+#include "rdv.h"
 
 menu::menu(QWidget *parent) :
     QDialog(parent),
@@ -52,8 +53,8 @@ menu::~menu()
 
 void menu::on_GestionEmployeBtn_clicked()
 {
-    this->hide();
-    secDialog SecDialog;
+   this->hide();
+   secDialog SecDialog;
    SecDialog.setModal(true);
     SecDialog.exec();
 }
@@ -62,4 +63,26 @@ void menu::on_AccountMenuBtn_clicked()
 {
 
 
+}
+
+void menu::on_GestionDesRdvbtn_clicked()
+{
+
+    //r = new rdv(this); // allocated space for a new MyDialog
+                                         // while also giving a parent class of
+                                         // this, the MainWindow class
+            //r->show();
+}
+
+void menu::on_GestionClientBtn_clicked()
+{
+
+}
+
+void menu::on_GestionDesEqbtn_clicked()
+{
+    j = new jawher(this); // allocated space for a new MyDialog
+                                         // while also giving a parent class of
+                                         // this, the MainWindow class
+            j->show();
 }

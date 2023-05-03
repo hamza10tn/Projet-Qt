@@ -10,6 +10,13 @@ QT       += serialport
 QT       += axcontainer
 QT += network
 
+QT+=sql
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+
+
+
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -24,27 +31,41 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     arduino.cpp \
     connection.cpp \
+    connexion.cpp \
+    dialog.cpp \
     employes.cpp \
+    equipment.cpp \
+    jawher.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
+    qrcode.cpp \
+    samar.cpp \
     secdialog.cpp \
     sessionuser.cpp
 
 HEADERS += \
     arduino.h \
     connection.h \
+    connexion.h \
+    dialog.h \
     employes.h \
+    equipment.h \
+    jawher.h \
     login.h \
     mainwindow.h \
     menu.h \
+    qrcode.h \
+    samar.h \
     secdialog.h \
     sessionuser.h
 
 FORMS += \
+    jawher.ui \
     mainwindow.ui \
     menu.ui \
+    samar.ui \
     secdialog.ui
 
 # Default rules for deployment.

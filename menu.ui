@@ -91,7 +91,6 @@ button:hover {
   background-color: #3e8e41; /* couleur de fond lorsqu'on survole */
   color: white;
 }
-
 </string>
     </property>
     <property name="text">
