@@ -35,7 +35,7 @@
 #include <QtCharts>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
-
+#include "menu.h"
 using namespace qrcodegen;
 jawher::jawher(QWidget *parent) :
     QDialog(parent),
@@ -134,7 +134,11 @@ void jawher::on_pushButton_3_clicked()
 
 void jawher::on_pushButton_4_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+    this->hide();
+
+     menu Menu;
+     Menu.setModal(true);
+     Menu.exec() ;
 }
 
 

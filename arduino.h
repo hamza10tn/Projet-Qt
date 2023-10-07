@@ -12,17 +12,22 @@ class Arduino
 {
 public:     //méthodes de la classe Arduino
     Arduino();
-     //int updatee(QString id);
+    int updatee(QString id);
     QByteArray getdata();
     int connect_arduino(); // permet de connecter le PC à Arduino
     int close_arduino(); // permet de femer la connexion
     int write_to_arduino( QByteArray ); // envoyer des données vers arduino
+    int read_to_arduino( QByteArray ); // envoyer des données vers arduino
+  QByteArray read_from_arduino();
+  QByteArray R_from_arduino();
 
     QSerialPort* getserial();   // accesseur
     QString getarduino_port_name();
     int cherchercode(QString code);
-
+     QString chercher(QString code);
     int chercherid(QString code);
+ QString cherchersamar(QString code);
+    int chercherH(QString code);
 
 private:
 QSerialPort * serial; //Cet objet rassemble des informations (vitesse, bits de données, etc.)

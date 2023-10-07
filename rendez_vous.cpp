@@ -5,8 +5,9 @@
 #include<QMessageBox>
 #include<QDebug>
 rendez_vous::rendez_vous()
-{}
+{
 
+}
 void rendez_vous::setid(QString n)
 {
     id=n;
@@ -112,25 +113,29 @@ QStandardItemModel *rendez_vous::afficher_rdv()
     QSqlQuery query2;
 
   //  query2.prepare("SELECT v.MATRICULE FROM rdv r JOIN vehicule v ON r.MATRICULE = v.MATRICULE JOIN clients c ON v.ID_C = c.ID_C WHERE c.ID_C = :idc");
- /*  query2.prepare("SELECT v.MATRICULE FROM VEHICULE v JOIN RDV r ON v.MATRICULE = r.MATRICULE JOIN CLIENTS c ON v.ID_C = c.ID_C WHERE c.ID_C = :idc ");
-    query2.bindValue(":idc", 1);
+   /*query2.prepare("SELECT v.MATRICULE FROM VEHICULE v JOIN RDV r ON r.ID_C = v.ID_C where r.ID_R=:id");
+   query2.bindValue(":idc", 1);
+    query2.bindValue(":id", 123);
+
     query2.exec();
-    QString matricule query2.value(0).toString();
-    QDebug()<<matricule;
+    QString matricule =query2.value(0).toString();
+
+    qDebug()<<matricule;
 query.next();
-QDebug()<<matricule;
+qDebug()<<"affichage de mat";
+
+qDebug()<<matricule;
 
 qDebug() << query2.lastError().text();
-
- QString matricule;
 */
+
 
     QStandardItemModel *model1 = new QStandardItemModel();
     model1->setColumnCount(3);
     model1->setHorizontalHeaderItem(0, new QStandardItem(QString("id")));
     model1->setHorizontalHeaderItem(1, new QStandardItem(QString("calendar")));
     model1->setHorizontalHeaderItem(2, new QStandardItem(QString("time")));
-  // model1->setHorizontalHeaderItem(3, new QStandardItem(QString("matricule")));
+   model1->setHorizontalHeaderItem(3, new QStandardItem(QString("matricule")));
     if (query.exec("SELECT * FROM RDV")) {
         int row = 0;
         while (query.next()) {
@@ -140,16 +145,16 @@ QString field2 = dat.toString("yyyy-MM-dd");
 
             QTime time = query.value(2).toTime();
             QString field3 = time.toString("hh:mm:ss");
-
+QString field4=query.value(3).toString();
             QStandardItem *item1 = new QStandardItem(field1);
             QStandardItem *item2 = new QStandardItem(field2);
             QStandardItem *item3 = new QStandardItem(field3);
-         //   QStandardItem *item4 = new QStandardItem(matricule);
+            QStandardItem *item4 = new QStandardItem(field4);
 
             model1->setItem(row, 0, item1);
             model1->setItem(row, 1, item2);
             model1->setItem(row, 2, item3);
-          //  model1->setItem(row, 3, item4);
+            model1->setItem(row, 3, item4);
 
             row++;
         }
@@ -236,7 +241,7 @@ return false;
      model1->setHorizontalHeaderItem(0, new QStandardItem(QString("id")));
      model1->setHorizontalHeaderItem(1, new QStandardItem(QString("calendar")));
      model1->setHorizontalHeaderItem(2, new QStandardItem(QString("time")));
-   // model1->setHorizontalHeaderItem(3, new QStandardItem(QString("matricule")));
+   model1->setHorizontalHeaderItem(3, new QStandardItem(QString("matricule")));
    if (query.prepare("SELECT * FROM RDV ORDER BY DATE_R " + type) && query.exec()){
          int row = 0;
          while (query.next()) {
@@ -246,16 +251,16 @@ return false;
 
              QTime time = query.value(2).toTime();
              QString field3 = time.toString("hh:mm:ss");
-
+QString field4=query.value(3).toString();
              QStandardItem *item1 = new QStandardItem(field1);
              QStandardItem *item2 = new QStandardItem(field2);
              QStandardItem *item3 = new QStandardItem(field3);
-          //   QStandardItem *item4 = new QStandardItem(matricule);
+             QStandardItem *item4 = new QStandardItem(field4);
 
              model1->setItem(row, 0, item1);
              model1->setItem(row, 1, item2);
              model1->setItem(row, 2, item3);
-           //  model1->setItem(row, 3, item4);
+             model1->setItem(row, 3, item4);
 
              row++;
          }
@@ -357,7 +362,7 @@ QString rendez_vous::matricule_existe(QString id)
     }
     while (query.next()) {
         return query.value(0).toString();
-qDebug()<<"lkaha";
+qDebug()<<"found it ";
     }
 
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1340</width>
-    <height>761</height>
+    <width>1494</width>
+    <height>941</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>30</x>
      <y>30</y>
-     <width>1171</width>
-     <height>701</height>
+     <width>1311</width>
+     <height>811</height>
     </rect>
    </property>
    <property name="title">
@@ -28,149 +28,57 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>0</y>
-      <width>1111</width>
-      <height>641</height>
+      <x>30</x>
+      <y>10</y>
+      <width>1231</width>
+      <height>631</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+  background-color: #87CEEB; /* blue sky color */
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+QLabel {
+  color: white;
+  font-size: 14px;
+}
+
+QLineEdit {
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+QPushButton {
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 5px;
+  color: gray;
+  padding: 5px;
+  font-size: 14px;
+}
+
+QPushButton:hover {
+  background-color: gray;
+  color: white;
+}</string>
+    </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_2">
-     <widget class="QPushButton" name="pushButton_6">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>20</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;</string>
-      </property>
-      <property name="text">
-       <string>Gest equipements</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>20</y>
-        <width>121</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;</string>
-      </property>
-      <property name="text">
-       <string>Gest clients</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>131</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;</string>
-      </property>
-      <property name="text">
-       <string>Gest employes</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>20</y>
-        <width>121</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;</string>
-      </property>
-      <property name="text">
-       <string>Gest vehicules</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_4">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>20</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;</string>
-      </property>
-      <property name="text">
-       <string>Gest Services</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="geometry">
-       <rect>
-        <x>620</x>
-        <y>20</y>
-        <width>191</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: black;
-font: 7pt &quot;Verdana&quot;;
-border: 2px solid rgb(255, 0, 127);
-padding: 5px;
-border-radius: 3px;
-opacity: 200;</string>
-      </property>
-      <property name="text">
-       <string>Gest RDV</string>
-      </property>
-     </widget>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>50</y>
-        <width>901</width>
-        <height>581</height>
+        <y>90</y>
+        <width>1071</width>
+        <height>541</height>
        </rect>
       </property>
       <property name="title">
@@ -559,6 +467,40 @@ opacity: 200;
          <height>511</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QGroupBox {
+  background-color: #87CEEB; /* blue sky color */
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+QLabel {
+  color: white;
+  font-size: 14px;
+}
+
+QLineEdit {
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+QPushButton {
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 5px;
+  color: gray;
+  padding: 5px;
+  font-size: 14px;
+}
+
+QPushButton:hover {
+  background-color: gray;
+  color: white;
+}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -717,10 +659,10 @@ opacity: 200;
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-10</x>
         <y>20</y>
-        <width>1031</width>
-        <height>601</height>
+        <width>1151</width>
+        <height>721</height>
        </rect>
       </property>
       <property name="title">
@@ -1203,7 +1145,7 @@ opacity: 200;
         <rect>
          <x>290</x>
          <y>60</y>
-         <width>741</width>
+         <width>821</width>
          <height>301</height>
         </rect>
        </property>
@@ -1249,22 +1191,6 @@ opacity: 200;</string>
        </property>
        <property name="text">
         <string>Precedent</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_17">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>-10</y>
-         <width>1991</width>
-         <height>531</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>../../Downloads/332319502_992673331694691_7199529608011094507_n (1).jpg</pixmap>
        </property>
       </widget>
       <widget class="QGroupBox" name="groupBox_6">
@@ -1365,7 +1291,6 @@ opacity: 200;</string>
         <string>Trier selon Salaire</string>
        </property>
       </widget>
-      <zorder>label_17</zorder>
       <zorder>groupBox_6</zorder>
       <zorder>groupBox_4</zorder>
       <zorder>groupBox_7</zorder>
@@ -1375,6 +1300,22 @@ opacity: 200;</string>
       <zorder>pushButton_17</zorder>
       <zorder>pushButton_13</zorder>
       <zorder>pushButton_12</zorder>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>10</y>
+        <width>1991</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../Downloads/332319502_992673331694691_7199529608011094507_n (1).jpg</pixmap>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="page">
@@ -1414,10 +1355,10 @@ opacity: 200;</string>
       <widget class="QLabel" name="label_18">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>-10</y>
+         <x>150</x>
+         <y>0</y>
          <width>1861</width>
-         <height>521</height>
+         <height>561</height>
         </rect>
        </property>
        <property name="text">
@@ -1507,19 +1448,19 @@ opacity: 200;</string>
      </widget>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_21">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>0</y>
-      <width>371</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>MENU</string>
-    </property>
-   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_21">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>10</y>
+     <width>371</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>MENU</string>
+   </property>
   </widget>
  </widget>
  <resources/>

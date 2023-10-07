@@ -8,6 +8,10 @@
 #include <QDialog>
 #include "mainwindow.h"
 #include "rdv.h"
+#include "hamza.h"
+#include "maissa.h"
+
+#include "samar.h"
 
 menu::menu(QWidget *parent) :
     QDialog(parent),
@@ -68,15 +72,18 @@ void menu::on_AccountMenuBtn_clicked()
 void menu::on_GestionDesRdvbtn_clicked()
 {
 
-    //r = new rdv(this); // allocated space for a new MyDialog
+    r = new rdv(this); // allocated space for a new MyDialog
                                          // while also giving a parent class of
                                          // this, the MainWindow class
-            //r->show();
+            r->show();
 }
 
 void menu::on_GestionClientBtn_clicked()
 {
-
+    c = new samar(this); // allocated space for a new MyDialog
+                                         // while also giving a parent class of
+                                         // this, the MainWindow class
+            c->show();
 }
 
 void menu::on_GestionDesEqbtn_clicked()
@@ -85,4 +92,20 @@ void menu::on_GestionDesEqbtn_clicked()
                                          // while also giving a parent class of
                                          // this, the MainWindow class
             j->show();
+}
+
+void menu::on_GestionDesVehiculebtn_clicked()
+{
+    h = new hamza(this); // allocated space for a new MyDialog
+                                         // while also giving a parent class of
+                                         // this, the MainWindow class
+            h->show();
+}
+
+void menu::on_GestionDesServicebtn_clicked()
+{
+    m = new maissa(this); // allocated space for a new MyDialog
+                                         // while also giving a parent class of
+                                         // this, the MainWindow class
+            m->show();
 }

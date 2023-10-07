@@ -6,7 +6,7 @@
 //QSerialPort est une classe de la bibliothèque Qt qui permet de communiquer avec un port série, tel que celui utilisé pour la communication avec une carte Arduino.
 Arduino::Arduino()
 {
-   // data="";
+   data="";
     arduino_port_name="";
     arduino_is_available=false;
     serial=new QSerialPort;
@@ -89,10 +89,7 @@ int Arduino::close_arduino()
          }
 
  }
-/* QByteArray Arduino::getdata()
- {
-     return data;
- }*/
+
 int Arduino::write_to_arduino( QByteArray d)
 
 {
@@ -105,4 +102,86 @@ int Arduino::write_to_arduino( QByteArray d)
 
 
 }
+QByteArray Arduino::read_from_arduino()
+{
+
+    if(serial->isReadable()){
+        serial->waitForReadyRead(20);
+         data=serial->readAll();
+         return data;
+    }
+    return NULL;
+ }
+QByteArray Arduino::R_from_arduino()
+{
+    if(serial->isReadable()){
+        if (serial->bytesAvailable() >= 4) {
+            data = serial->read(4);
+        }
+        return data;
+    }
+    return QByteArray();
+}
+QByteArray Arduino::getdata()
+{
+    return data;
+}
+QString Arduino::chercher(QString code){
+    QSqlDatabase bd = QSqlDatabase::database();
+    QString nom;
+    QString marque;
+    QSqlQuery query;
+    query.prepare("SELECT MATRICULE, TEMP FROM VEHICULE WHERE MATRICULE = :code");
+    query.bindValue(":code", code);
+
+    query.exec();
+    if (query.next())
+    {
+        nom = query.value(0).toString();
+        marque = query.value(1).toString();
+        return /*"MATRICULE: " + nom +*/  "TEMP: " + marque;
+    }
+    else {
+        return "";
+    }
+}
+int Arduino::chercherH(QString id){
+
+    QSqlDatabase bd = QSqlDatabase::database();
+
+        QSqlQuery query;
+        query.prepare("SELECT matricule  FROM VEHICULE WHERE matricule =:id");
+ query.bindValue(":id", id);
+
+        query.exec();
+        if (query.next())
+        {
+
+
+             return 1;
+        }
+        else {
+            return -1;
+        }
+
+}
+QString Arduino::cherchersamar(QString code){
+
+    QSqlDatabase bd = QSqlDatabase::database();
+     QString matricule;
+             QSqlQuery query;
+             query.prepare("SELECT MATRICULE FROM RDV WHERE ID_R =:code");
+      query.bindValue(":code", code);
+
+             query.exec();
+             if (query.next())
+             {
+
+                 matricule=query.value(0).toString();
+                  return matricule;
+             }
+             else {
+                 return "";
+             }
+         }
 

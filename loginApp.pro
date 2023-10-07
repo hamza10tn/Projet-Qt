@@ -29,42 +29,72 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    achat.cpp \
     arduino.cpp \
+    client.cpp \
     connection.cpp \
     connexion.cpp \
     dialog.cpp \
     employes.cpp \
     equipment.cpp \
+    hamza.cpp \
     jawher.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    maissa.cpp \
     menu.cpp \
+    qratingbar.cpp \
     qrcode.cpp \
+    rating.cpp \
+    rdv.cpp \
+    reduction.cpp \
+    rendez_vous.cpp \
     samar.cpp \
     secdialog.cpp \
-    sessionuser.cpp
+    service.cpp \
+    sessionuser.cpp \
+    stat.cpp \
+    type_service.cpp \
+    vehicule.cpp
 
 HEADERS += \
+    achat.h \
     arduino.h \
+    client.h \
     connection.h \
     connexion.h \
     dialog.h \
     employes.h \
     equipment.h \
+    hamza.h \
     jawher.h \
     login.h \
     mainwindow.h \
+    maissa.h \
     menu.h \
+    qratingbar.h \
     qrcode.h \
+    rating.h \
+    rdv.h \
+    reduction.h \
+    rendez_vous.h \
     samar.h \
     secdialog.h \
-    sessionuser.h
+    service.h \
+    sessionuser.h \
+    stat.h \
+    type_service.h \
+    vehicule.h
 
 FORMS += \
+    dialog.ui \
+    hamza.ui \
     jawher.ui \
     mainwindow.ui \
+    maissa.ui \
     menu.ui \
+    rdv.ui \
     samar.ui \
     secdialog.ui
 
@@ -72,3 +102,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    ../../../Downloads/untitled1/resources.qrc

@@ -34,6 +34,7 @@ private slots:
     void on_btn_changerMdp_clicked();
 
     void on_pushButton_login_2_clicked();
+    void update_label();
 
 private:
     Ui::MainWindow *ui;

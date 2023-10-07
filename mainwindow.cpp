@@ -26,11 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
        break;
     case(-1):qDebug() << "arduino is not available";
     }
-    // QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
      //le slot update_label suite à la reception du signal readyRead (reception des données).
-
-
-
 
 
 }
@@ -45,7 +42,23 @@ qDebug() << "l9iyo";
   }
 
 }
+void MainWindow::update_label()
+{
+    QByteArray data;
+        data = A.read_from_arduino();
 
+        if (!data.isEmpty()) {
+            QString matricule = A.cherchersamar(data);
+            if (!matricule.isEmpty()) {
+                QMessageBox::information(this, tr("Welcome"), tr("Bienvenue %1").arg(matricule));
+                qDebug() << "valid";
+            } else {
+                QMessageBox::information(this, tr("Error"), tr("inexistant"));
+                qDebug() << "invalid";
+            }
+        }
+
+}
 
 MainWindow::~MainWindow()
 {
@@ -64,6 +77,8 @@ void MainWindow::on_pushButton_login_clicked()
        bool test= l.connect(username,password);
 
      if(test){
+       //  A.close_arduino();
+      //hedhi eli badeltha
          this->hide();
          qDebug ()<<test ;
           menu Menu;

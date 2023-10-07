@@ -5,7 +5,9 @@
 #include <QSqlDatabase>
 #include "rdv.h"
 #include "jawher.h"
-
+#include "samar.h"
+#include "hamza.h"
+#include "maissa.h"
 namespace Ui {
 class menu;
 }
@@ -33,10 +35,17 @@ private slots:
 
     void on_GestionDesEqbtn_clicked();
 
+    void on_GestionDesVehiculebtn_clicked();
+
+    void on_GestionDesServicebtn_clicked();
+
 private:
     Ui::menu *ui;
     rdv *r;
     jawher *j;
+    samar *c;
+    hamza *h;
+    maissa *m;
 
 };
 
